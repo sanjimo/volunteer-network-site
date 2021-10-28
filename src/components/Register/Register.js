@@ -54,7 +54,6 @@ const Register = () => {
             verifyEmail();
             setUserName();
             history.push(redirect_uri);
-            refreshPage();
         })
         .catch(error => {
             setError(error.message);
@@ -82,11 +81,6 @@ const Register = () => {
         .then(()=>{
             history.push(redirect_uri);
         })
-    }
-
-    //reload page
-    const refreshPage = ()=>{
-        window.location.reload();
     }
 
 
